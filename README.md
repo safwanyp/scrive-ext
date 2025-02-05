@@ -200,7 +200,7 @@ Run composer install:
 Command to run unit tests:
 
 ```
-(node build --copy; node build --composer-install; cd site; vendor/bin/phpunit tests/unit/Espo/Modules/{@name})
+(node build --copy; node build --composer-install; cd site; vendor/bin/phpunit tests/unit/Espo/Modules/Scrive-ext)
 ```
 
 ### Integration
@@ -230,7 +230,7 @@ return [
 Command to run integration tests:
 
 ```
-(node build --copy; node build --composer-install; cd site; vendor/bin/phpunit tests/integration/Espo/Modules/{@name})
+(node build --copy; node build --composer-install; cd site; vendor/bin/phpunit tests/integration/Espo/Modules/Scrive-ext)
 ```
 
 Note that integration tests needs the full Espo installation.
@@ -243,7 +243,7 @@ Command to run:
 node build --copy; node build --composer-install; site/vendor/bin/phpstan
 ```
 
-If your extension contains additional PHP packages, you also need to add `site/custom/Espo/Modules/{@name}/vendor` to the *scanDirectories* section in *phpstan.neon* config.
+If your extension contains additional PHP packages, you also need to add `site/custom/Espo/Modules/Scrive-ext/vendor` to the *scanDirectories* section in *phpstan.neon* config.
 
 Note: You can omit *composer-install* command if your extension does not contain PHP packages.
 
@@ -255,8 +255,8 @@ You need to set the following paths to be ignored in your IDE:
 * `site/build`
 * `site/custom/`
 * `site/client/custom/`
-* `site/tests/unit/Espo/Modules/{@name}`
-* `site/tests/integration/Espo/Modules/{@name}`
+* `site/tests/unit/Espo/Modules/Scrive-ext`
+* `site/tests/integration/Espo/Modules/Scrive-ext`
 
 ### File watcher
 
@@ -288,12 +288,12 @@ In `extension.json`, add a command that will bundle the needed library into an A
 }
 ```
 
-Add the library module path to `src/files/custom/Espo/Modules/{@name}/Resources/metadata/app/jsLibs.json` 
+Add the library module path to `src/files/custom/Espo/Modules/Scrive-ext/Resources/metadata/app/jsLibs.json` 
 
 ```json
 {
     "some-lib": {
-        "path": "client/custom/modules/{@nameHyphen}/lib/some-lib.js"
+        "path": "client/custom/modules/scrive-ext/lib/some-lib.js"
     }
 }
 ```

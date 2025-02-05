@@ -1,9 +1,9 @@
 {
-    "module": "{@name}",
-    "name": "{@nameLabel}",
-    "description": "{@description}",
-    "author": "{@author}",
-    "bundled": {@bundled},
+    "module": "Scrive-ext",
+    "name": "scrive-ext",
+    "description": "Extension for integrating with Scrive eSign.",
+    "author": "Safwan Parkar",
+    "bundled": true,
     "acceptableVersions": [
         ">=7.3.0"
     ],
